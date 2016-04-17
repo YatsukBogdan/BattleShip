@@ -1,9 +1,7 @@
-#ifndef MAIN_SCREEN_IN_GAME
-#define MAIN_SCREEN_IN_GAME
+#ifndef EXIT_SCREEN
+#define EXIT_SCREEN
 
-#include "SFML\Graphics.hpp"
-#include "screen.h"
-#include "button.h"
+
 
 class MainScreen : public Screen {
 private:
@@ -15,4 +13,5 @@ public:
     void act(RenderWindow &window);
 };
 
-#endif
+#endif // EXIT_SCREEN
+

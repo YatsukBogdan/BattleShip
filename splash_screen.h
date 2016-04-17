@@ -1,0 +1,6 @@
+#ifndef SPLASH_SCREEN
+#define SPLASH_SCREEN
+
+
+
+#endif // SPLASH_SCREEN

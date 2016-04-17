@@ -11,11 +11,21 @@ CONFIG(debug, debug|release): LIBS += -lsfml-audio-d -lsfml-graphics-d -lsfml-ma
 INCLUDEPATH += E:/ProgrammingStuff/C++/SFML/SFML-2.0/include
 DEPENDPATH += E:/ProgrammingStuff/C++/SFML/SFML-2.0/include
 
-HEADERS += battlefield.h
+HEADERS += battlefield.h \
+    splash_screen.h \
+    button.h \
+    screen.h \
+    current_screen.h \
+    exit_screen.h
 HEADERS += main_screen.h
-HEADERS += menu.h
+HEADERS +=
 HEADERS += ship.h
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    splash_screen.cpp \
+    button.cpp \
+    main_screen.cpp \
+    screen.cpp \
+    exit_screen.cpp
 SOURCES += battlefield.cpp
 SOURCES += ship.cpp
