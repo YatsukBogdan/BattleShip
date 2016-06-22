@@ -6,6 +6,7 @@
 class Screen{
 public:
     virtual void act(sf::RenderWindow &window);
+    Screen *clone();
 };
 
 #endif // SCREEN

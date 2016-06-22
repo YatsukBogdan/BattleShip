@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 3.5.1, 2016-06-16T15:20:40. -->
+<!-- Written by QtCreator 3.5.1, 2016-05-22T01:26:54. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
-  <value type="QByteArray">{01433651-256f-4dce-95b6-9f42dfc2172e}</value>
+  <value type="QByteArray">{97fa1ef7-3ad3-4c71-b82f-44967537b2b5}</value>
  </data>
  <data>
   <variable>ProjectExplorer.Project.ActiveTarget</variable>
@@ -87,7 +87,7 @@
       <valuelist type="QVariantList" key="Qt4ProjectManager.MakeStep.AutomaticallyAddedMakeArguments"/>
       <value type="bool" key="Qt4ProjectManager.MakeStep.Clean">false</value>
       <value type="QString" key="Qt4ProjectManager.MakeStep.MakeArguments"></value>
-      <value type="QString" key="Qt4ProjectManager.MakeStep.MakeCommand">C:/MinGW/bin/mingw32-make.exe</value>
+      <value type="QString" key="Qt4ProjectManager.MakeStep.MakeCommand">C:/MinGW492/mingw32/bin/mingw32-make.exe</value>
      </valuemap>
      <value type="int" key="ProjectExplorer.BuildStepList.StepsCount">2</value>
      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Сборка</value>
@@ -103,7 +103,7 @@
       <valuelist type="QVariantList" key="Qt4ProjectManager.MakeStep.AutomaticallyAddedMakeArguments"/>
       <value type="bool" key="Qt4ProjectManager.MakeStep.Clean">true</value>
       <value type="QString" key="Qt4ProjectManager.MakeStep.MakeArguments">clean</value>
-      <value type="QString" key="Qt4ProjectManager.MakeStep.MakeCommand">C:/MinGW/bin/mingw32-make.exe</value>
+      <value type="QString" key="Qt4ProjectManager.MakeStep.MakeCommand">C:/MinGW492/mingw32/bin/mingw32-make.exe</value>
      </valuemap>
      <value type="int" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Очистка</value>
@@ -113,8 +113,7 @@
     <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">2</value>
     <value type="bool" key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment">false</value>
     <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges">
-     <value type="QString">PATH=C:\Qt\5.5\mingw492_32\bin;C:\Qt\Tools\mingw492_32\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Qt\5.5\mingw492_32\bin;C:\Qt\Tools\QtCreator\bin;C:\MinGW\bin</value>
-     <value type="QString">&lt;переменная&gt;=&lt;значение&gt;</value>
+     <value type="QString">PATH=C:\Qt\5.5\mingw492_32\bin;C:\Qt\Tools\mingw492_32\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Qt\5.5\mingw492_32\bin;C:\Qt\Tools\QtCreator\bin;C:\MinGW492\mingw32\bin</value>
      <value type="QString">&lt;переменная&gt;=&lt;значение&gt;</value>
      <value type="QString">&lt;переменная&gt;=&lt;значение&gt;</value>
     </valuelist>

@@ -7,12 +7,14 @@
 
 class MainScreen : public Screen {
 private:
+    RectangleShape background;
     Button *play;
     Button *options;
     Button *quit;
 public:
     MainScreen();
     void act(RenderWindow &window);
+    void draw(RenderWindow &window);
 };
 
 #endif

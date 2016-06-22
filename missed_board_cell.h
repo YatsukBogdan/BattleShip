@@ -1,0 +1,6 @@
+#ifndef MISSED_BOARD_CELL
+#define MISSED_BOARD_CELL
+
+
+
+#endif // MISSED_BOARD_CELL

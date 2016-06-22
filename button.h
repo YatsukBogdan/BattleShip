@@ -11,8 +11,8 @@ private:
     Font font;
     Text text;
 
-    Color baseColor;
-    Color hoverColor;
+    Color base;
+    Color hover;
 
     double x;
     double y;
@@ -20,9 +20,14 @@ private:
     double height;
     RectangleShape shape;
 
+    void isPressed();
+    bool pressed;
+    bool released;
+
 public:
     Button(double x, double y, double width, double height, String text);
-    bool isPressed();
+    bool isClicked();
+    bool isReleased();
     bool isHovered();
     void updateRectangle();
     void activateHover();

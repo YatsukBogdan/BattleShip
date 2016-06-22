@@ -1,29 +1,35 @@
 #include "SFML/Graphics.hpp"
 #include "button.h"
-#include "main_screen.h"
-#include "act_screen.h"
+#include "current_screen.h"
+#include "screen_cache_global.h"
+
+Screen* current_screen;
+ScreenCache* cache;
 
 using namespace sf;
 
 int main()
 {
-    ContextSettings settings;
-    settings.antialiasingLevel = 8;
 
-    RenderWindow window(VideoMode::getDesktopMode()/*VideoMode(800, 600)*/, "BattleShip", Style::Fullscreen, settings);
+    RenderWindow window(VideoMode::getDesktopMode(), "BattleShip", Style::Fullscreen);
 
-    Screen* current_screen = new MainScreen();
+    cache = new ScreenCache();
+
+    current_screen = cache->getScreen("main");
 
 	while (window.isOpen())
-	{
+    {
         Event event;
-		while (window.pollEvent(event))
-		{
+        while (window.pollEvent(event))
+        {
             if (event.type == Event::Closed)
-				window.close();
-		}
-
-        window.clear(Color(52, 73, 94));
+                window.close();
+            if (event.key.code == sf::Keyboard::F12)
+            {
+                sf::Image screenshot = window.capture();
+                screenshot.saveToFile("screenshot.png");
+            }
+        }
 
         current_screen->act(window);
 

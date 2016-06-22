@@ -1,4 +1,5 @@
 #include "button.h"
+#include "stdio.h"
 
 Button::Button(double x, double y, double width, double height, String text){
     this->x = x;
@@ -6,31 +7,47 @@ Button::Button(double x, double y, double width, double height, String text){
     this->width = width;
     this->height = height;
 
-    baseColor.r = 41;
-    baseColor.g = 128;
-    baseColor.b = 185;
+    base.r = 41;
+    base.g = 128;
+    base.b = 185;
 
-    hoverColor.r = 52;
-    hoverColor.g = 152;
-    hoverColor.b = 219;
+    hover.r = 52;
+    hover.g = 152;
+    hover.b = 219;
 
     this->shape.setPosition(x,y);
     this->shape.setSize(Vector2f(width, height));
-    this->shape.setFillColor(baseColor);
+    this->shape.setFillColor(base);
 
-    font.loadFromFile("C:/Users/Bubenyushka/Documents/CourseWork/century_gothic_bold.ttf");
+    font.loadFromFile("D:/CourseWork/century_gothic_bold.ttf");
 
     this->text.setFont(font);
     this->text.setString(text);
     this->text.setCharacterSize(height * 0.5);
     this->text.setPosition(Vector2f(x + width * 0.1, y + height * 0.25));
     this->text.setColor(Color::White);
+
+    released = true;
 }
 
-bool Button::isPressed(){
-    if (Mouse::isButtonPressed(Mouse::Left))
-        if (isHovered())
+void Button::isPressed(){
+    if (isHovered())
+        if (Mouse::isButtonPressed(Mouse::Left)){
+            released = false;
+            pressed = true;
+            return;
+        }
+    released = true;
+    pressed = false;
+}
+
+bool Button::isClicked(){
+    isPressed();
+    while(pressed){
+        isPressed();
+        if (released)
             return true;
+    }
     return false;
 }
 
@@ -53,16 +70,16 @@ void Button::draw(RenderWindow &window){
 }
 
 void Button::activateHover(){
-    this->shape.setFillColor(hoverColor);
+    shape.setFillColor(hover);
 }
 
 void Button::activateNormalState(){
-    this->shape.setFillColor(baseColor);
+    shape.setFillColor(base);
 }
 
 void Button::act(RenderWindow &window){
-    this->draw(window);
-    if (this->isHovered())
-        this->activateHover();
-    else this->activateNormalState();
+    draw(window);
+    if (isHovered())
+        activateHover();
+    else activateNormalState();
 }
